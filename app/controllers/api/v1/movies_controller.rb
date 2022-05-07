@@ -1,6 +1,6 @@
 module Api
     module V1
-      class UsersController < ApplicationController
+      class MoviesController < ApplicationController
 
         def index 
         @movies = Movie.all 
@@ -17,7 +17,7 @@ def create
                              genre: params[:genre], ticket_price: params[:ticket_price], country: params[:country],
                               lead_cast: params[:lead_cast])
     if @new_movie.save
-      render json: { success: true, message: 'Doctor created', data: { movie: @new_movie } }, status: :created
+      render json: { success: true, message: 'Movie created', data: { movie: @new_movie } }, status: :created
     else
       render json: { success: false, errors: new_movie.errors }, status: :unprocessable_entity
     end
