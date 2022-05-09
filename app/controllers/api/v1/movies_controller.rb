@@ -12,7 +12,7 @@ module Api
         end
       end
 
-      # POST /doctors
+      # POST /movies
       def create
         @new_movie = Movie.new(title: params[:title], description: params[:description], photo: params[:photo],
                                director: params[:director], playing_time: params[:playing_time], release_date: params[:release_date],
