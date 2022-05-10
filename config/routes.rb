@@ -10,6 +10,8 @@ Rails.application.routes.draw do
     namespace :v1 do
       get '/movies' => 'movies#index'
       post '/movies/create' => 'movies#create'
+      get '/reservations' => 'reservations#index'
+      post '/reservations/create' => 'reservations#create'
     end
   end
 end
