@@ -1,6 +1,8 @@
 module Api
   module V1
     class ReservationsController < ApplicationController
+      # before_action :set_reservation, only: :destroy
+
       def index
         @reservations = Reservation.all
         if @reservations
@@ -19,6 +21,22 @@ module Api
         else
           render json: { success: false, errors: new_reservation.errors }, status: :unprocessable_entity
         end
+      end
+
+      # DELETE /reservation
+      def destroy
+        @reservation = Reservation.find(params[:id]).destroy!
+        if @reservation.destroy
+          render json: { message: 'Reservation successfully deleted' }
+        else
+          render json: @reservation.errors, status: :unprocessable_entity
+        end
+      end
+
+      private
+
+      def set_reservation
+        @reservation = Reservation.find(params[:id])
       end
     end
   end

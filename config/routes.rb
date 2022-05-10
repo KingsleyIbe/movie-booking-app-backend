@@ -12,6 +12,7 @@ Rails.application.routes.draw do
       post '/movies/create' => 'movies#create'
       get '/reservations' => 'reservations#index'
       post '/reservations/create' => 'reservations#create'
+      delete '/reservations/:id' => 'reservations#destroy'
     end
   end
 end
