@@ -16,7 +16,7 @@ This is a movie app which allows registered users to book and reserve movies of 
 
 ## The learning objective of this project are
 
-- Create react front end app
+- Create rails back end app
 - Connect react front end app to rails back end
 - Use API end point to get data
 - Fetch data from the API
