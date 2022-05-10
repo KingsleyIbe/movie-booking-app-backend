@@ -7,7 +7,8 @@ module Api
         if @user
           render json: { success: false, username: 'Username already taken' }, status: :unprocessable_entity
         else
-          render json: { success: true, username: @user }, status: :created
+          @new_user = User.create(username: params[:username])
+          render json: { success: true, username: @new_user }, status: :created
         end
       end
 
