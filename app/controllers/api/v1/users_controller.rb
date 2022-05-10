@@ -11,6 +11,15 @@ module Api
         end
       end
 
+      #user login
+      def login
+        @user = User.find_by(username: params[:username])
+         if @user
+          render json: { success: true, username: @user.username }, status: :created
+        else
+          render json: { success: false, username: 'Username does not exist' }, status: :unprocessable_entity
+        end
+      end
     end
   end
 end
