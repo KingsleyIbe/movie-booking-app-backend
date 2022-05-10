@@ -31,7 +31,7 @@ To get a local copy up and running follow these simple example steps.
 
 ### Setup
 
-- ```git https://github.com/KingsleyIbe/movie-booking-app-frontend.git``
+- ```git https://github.com/KingsleyIbe/movie-booking-app-backend.git``
 
 - ```cd movie-booking-app-frontend```
 
