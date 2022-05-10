@@ -1,3 +1,4 @@
+
 # frozen_string_literal: true
 
 module Api
@@ -12,7 +13,7 @@ module Api
         end
       end
 
-      # POST /doctors
+      # POST /movies
       def create
         @new_movie = Movie.new(title: params[:title], description: params[:description], photo: params[:photo],
                                director: params[:director],
