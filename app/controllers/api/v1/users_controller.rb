@@ -7,7 +7,7 @@ module Api
         if @user
           render json: { success: false, username: 'Username already taken' }, status: :unprocessable_entity
         else
-          render json: { success: true, username: @user.username }, status: :created
+          render json: { success: true, username: @user }, status: :created
         end
       end
 
@@ -15,7 +15,7 @@ module Api
       def login
         @user = User.find_by(username: params[:username])
         if @user
-          render json: { success: true, username: @user.username }, status: :created
+          render json: { success: true, username: @user }, status: :created
         else
           render json: { success: false, username: 'Username does not exist' }, status: :unprocessable_entity
         end
