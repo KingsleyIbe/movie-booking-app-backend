@@ -60,9 +60,9 @@ To get a local copy up and running follow these simple example steps.
 
 👤 Busiwa Liuma
 
--GitHub: (https://github.com/Busiwa24) 
--Twitter: (https://twitter.com/busiwaliuma) 
--LinkedIn: (https://www.linkedin.com/in/busiwa-liuma-)
+- GitHub: (https://github.com/Busiwa24) 
+- Twitter: (https://twitter.com/busiwaliuma) 
+- LinkedIn: (https://www.linkedin.com/in/busiwa-liuma-)
 
 
 ## 🤝 Contributing
