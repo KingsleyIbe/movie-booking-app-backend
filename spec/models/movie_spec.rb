@@ -61,3 +61,8 @@ RSpec.describe Movie, type: :model do
         expect(subject.country).to eq 'USA'
       end
 
+       it 'lead_cast of movie to be valid' do
+        expect(subject.lead_cast).to eq 'Marlon Brando, Al Pacino, James Caan'
+      end
+    end
+
