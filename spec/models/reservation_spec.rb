@@ -19,3 +19,24 @@ RSpec.describe Reservation, type: :model do
     )
     subject { Reservation.new(user: user, movie: movie, location: 'Cinema', date: '2020-01-01') }
     before { subject.save! }
+
+    context 'valid' do
+      it 'reservation to be valid' do
+        expect(subject).to be_valid
+      end
+
+      it 'location to be valid' do
+        expect(subject.location).to eq 'Cinema'
+      end
+
+      it 'date to be valid' do
+        expect(subject.date).to eq '2020-01-01'
+      end
+    end
+
+    context 'invalid' do
+      it 'check the location is not blank' do
+        subject.location = nil
+        expect(subject).to_not be_valid
+      end
+
