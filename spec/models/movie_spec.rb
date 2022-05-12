@@ -72,3 +72,8 @@ RSpec.describe Movie, type: :model do
         expect(subject).to_not be_valid
       end
 
+       it 'check the director is not blank' do
+        subject.director = nil
+        expect(subject).to_not be_valid
+      end
+
