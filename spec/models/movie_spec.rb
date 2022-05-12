@@ -57,3 +57,7 @@ RSpec.describe Movie, type: :model do
         expect(subject.ticket_price).to eq 10
       end
 
+      it 'country of movie to be valid' do
+        expect(subject.country).to eq 'USA'
+      end
+
