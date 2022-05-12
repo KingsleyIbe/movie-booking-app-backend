@@ -1,10 +1,8 @@
-# frozen_string_literal: true
-
 require 'rails_helper'
 
 RSpec.describe Reservation, type: :model do
   describe 'Reservation model' do
-    user = User.create(username: "Busiwa", role: "admin")
+    user = User.create(username: 'Busiwa', role: 'admin')
     movie = Movie.create!(
       title: 'The Godfather',
       director: 'Francis Ford Coppola',
@@ -17,7 +15,7 @@ RSpec.describe Reservation, type: :model do
       country: 'USA',
       lead_cast: 'Marlon Brando, Al Pacino, James Caan'
     )
-    subject { Reservation.new(user: user, movie: movie, location: 'Cinema', date: '2020-01-01') }
+    subject { Reservation.new(user:, movie:, location: 'Cinema', date: '2020-01-01') }
     before { subject.save! }
 
     context 'valid' do
@@ -40,7 +38,6 @@ RSpec.describe Reservation, type: :model do
         expect(subject).to_not be_valid
       end
 
-      
       it 'check if the location is not exceeding 50 characters' do
         subject.location = 'a' * 51
         expect(subject).to_not be_valid
@@ -58,4 +55,3 @@ RSpec.describe Reservation, type: :model do
     end
   end
 end
-

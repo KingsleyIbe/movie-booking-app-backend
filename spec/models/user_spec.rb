@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 require 'rails_helper'
 
 RSpec.describe User, type: :model do
@@ -36,7 +34,6 @@ RSpec.describe User, type: :model do
         subject.role = nil
         expect(subject).to_not be_valid
       end
-
     end
   end
 end
