@@ -5,10 +5,10 @@ module Api
       def register
         @user = User.find_by(username: params[:username])
         if @user
-          render json: { success: false, username: 'Username already taken' }, status: :unprocessable_entity
+          render json: { success: false, user: 'Username already taken' }, status: :unprocessable_entity
         else
           @new_user = User.create(username: params[:username])
-          render json: { success: true, username: @new_user }, status: :created
+          render json: { success: true, user: @new_user }, status: :created
         end
       end
 
@@ -16,9 +16,9 @@ module Api
       def login
         @user = User.find_by(username: params[:username])
         if @user
-          render json: { success: true, username: @user }, status: :created
+          render json: { success: true, user: @user }, status: :created
         else
-          render json: { success: false, username: 'Username does not exist' }, status: :unprocessable_entity
+          render json: { success: false, user: 'Username does not exist' }, status: :unprocessable_entity
         end
       end
     end
