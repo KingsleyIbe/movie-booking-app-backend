@@ -37,3 +37,7 @@ RSpec.describe Movie, type: :model do
         expect(subject.description).to eq 'The aging patriarch of an organized crime dynasty transfers control of his clandestine empire to his reluctant son.'
       end
 
+       it 'playing_time of movie to be valid' do
+        expect(subject.playing_time).to eq '2hrs. 59mins'
+      end
+
