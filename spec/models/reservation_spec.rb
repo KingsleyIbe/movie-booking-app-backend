@@ -40,3 +40,22 @@ RSpec.describe Reservation, type: :model do
         expect(subject).to_not be_valid
       end
 
+      
+      it 'check if the location is not exceeding 50 characters' do
+        subject.location = 'a' * 51
+        expect(subject).to_not be_valid
+      end
+
+      it 'check if the date is not blank' do
+        subject.date = nil
+        expect(subject).to_not be_valid
+      end
+
+      it 'check if the date is not exceeding 20 characters' do
+        subject.date = 'a' * 21
+        expect(subject).to_not be_valid
+      end
+    end
+  end
+end
+
