@@ -102,4 +102,32 @@ RSpec.describe Movie, type: :model do
         expect(subject).to_not be_valid
       end
 
+       it 'check if the ticket_price is not blank' do
+        subject.ticket_price = nil
+        expect(subject).to_not be_valid
+      end
+
+      it 'check if the country is not blank' do
+        subject.country = nil
+        expect(subject).to_not be_valid
+      end
+
+      it 'check if the lead_cast is not blank' do
+        subject.lead_cast = nil
+        expect(subject).to_not be_valid
+      end
+
+      it 'check if ticket_price is numeric' do
+        subject.ticket_price = 'not-numeric'
+        expect(subject).to_not be_valid
+      end
+
+      it 'check if ticket_price is equal or greater than one' do
+        subject.ticket_price = 0
+        expect(subject).to_not be_valid
+      end
+    end
+  end
+end
+
 
