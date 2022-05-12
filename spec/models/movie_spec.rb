@@ -49,3 +49,7 @@ RSpec.describe Movie, type: :model do
         expect(subject.release_date).to eq '1972-03-15'
       end
 
+       it 'genre of movie to be valid' do
+        expect(subject.genre).to eq 'Drama'
+      end
+
