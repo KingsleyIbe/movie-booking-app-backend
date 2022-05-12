@@ -28,4 +28,8 @@ RSpec.describe Movie, type: :model do
        it 'title of movie to be valid' do
         expect(subject.title).to eq 'The Godfather'
       end
-      
+
+       it 'director of movie to be valid' do
+        expect(subject.director).to eq 'Francis Ford Coppola'
+      end
+
