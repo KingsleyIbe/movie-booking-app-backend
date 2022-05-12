@@ -19,3 +19,8 @@ RSpec.describe Movie, type: :model do
       )
     end
     before { subject.save }
+
+     context 'valid' do
+      it 'movie to be valid' do
+        expect(subject).to be_valid
+      end
