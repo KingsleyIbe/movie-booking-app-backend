@@ -45,3 +45,7 @@ RSpec.describe Movie, type: :model do
         expect(subject.photo).to eq 'https://m.media-amazon.com/images/M/MV5BM2MyNjYxNmUtYWUzNC00MTY5LWJmZDAtZTc5ZjI1ZWI0OTUyXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SY1000_CR0,0,704,1000_AL_.jpg'
       end
 
+       it 'release_date of movie to be valid' do
+        expect(subject.release_date).to eq '1972-03-15'
+      end
+
