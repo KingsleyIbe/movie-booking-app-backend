@@ -12,16 +12,16 @@
 #       Install PostgreSQL and put its /bin directory on your path.
 #
 # Configure Using Gemfile
-# gem "pg"
+# gem "p
 #
 default: &default
   adapter: postgresql
-  encoding: unicode
+  encoding: WIN1252
   # For details on connection pooling, see Rails configuration guide
   # https://guides.rubyonrails.org/configuring.html#database-pooling
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  username: Amkam
-  password: amkampgadmin
+  username: postgres
+  password: testing
 
 development:
   <<: *default
