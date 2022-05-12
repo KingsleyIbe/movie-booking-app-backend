@@ -82,3 +82,24 @@ RSpec.describe Movie, type: :model do
         expect(subject).to_not be_valid
       end
 
+      it 'check if the playing_time is not blank' do
+        subject.playing_time = nil
+        expect(subject).to_not be_valid
+      end
+
+      it 'check if the photo is not blank' do
+        subject.photo = nil
+        expect(subject).to_not be_valid
+      end
+
+      it 'check if the release_date is not blank' do
+        subject.release_date = nil
+        expect(subject).to_not be_valid
+      end
+
+      it 'check if the genre is not blank' do
+        subject.genre = nil
+        expect(subject).to_not be_valid
+      end
+
+
