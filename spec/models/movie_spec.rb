@@ -41,3 +41,7 @@ RSpec.describe Movie, type: :model do
         expect(subject.playing_time).to eq '2hrs. 59mins'
       end
 
+       it 'photo of movie to be valid' do
+        expect(subject.photo).to eq 'https://m.media-amazon.com/images/M/MV5BM2MyNjYxNmUtYWUzNC00MTY5LWJmZDAtZTc5ZjI1ZWI0OTUyXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SY1000_CR0,0,704,1000_AL_.jpg'
+      end
+
