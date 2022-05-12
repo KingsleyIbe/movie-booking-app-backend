@@ -33,3 +33,7 @@ RSpec.describe Movie, type: :model do
         expect(subject.director).to eq 'Francis Ford Coppola'
       end
 
+       it 'description of movie to be valid' do
+        expect(subject.description).to eq 'The aging patriarch of an organized crime dynasty transfers control of his clandestine empire to his reluctant son.'
+      end
+
