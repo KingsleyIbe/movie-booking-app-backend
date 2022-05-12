@@ -26,3 +26,17 @@ RSpec.describe User, type: :model do
         subject.username = nil
         expect(subject).to_not be_valid
       end
+
+      it 'check if the username is not exceeding 50 characters' do
+        subject.username = 'a' * 51
+        expect(subject).to_not be_valid
+      end
+
+      it 'check if the role is not blank' do
+        subject.role = nil
+        expect(subject).to_not be_valid
+      end
+
+    end
+  end
+end
