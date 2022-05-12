@@ -24,3 +24,8 @@ RSpec.describe Movie, type: :model do
       it 'movie to be valid' do
         expect(subject).to be_valid
       end
+
+       it 'title of movie to be valid' do
+        expect(subject.title).to eq 'The Godfather'
+      end
+      
