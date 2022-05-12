@@ -53,3 +53,7 @@ RSpec.describe Movie, type: :model do
         expect(subject.genre).to eq 'Drama'
       end
 
+       it 'ticket_price of movie to be valid' do
+        expect(subject.ticket_price).to eq 10
+      end
+
