@@ -77,3 +77,8 @@ RSpec.describe Movie, type: :model do
         expect(subject).to_not be_valid
       end
 
+      it 'check if the description is not exceeding 500 characters' do
+        subject.description = 'a' * 501
+        expect(subject).to_not be_valid
+      end
+
