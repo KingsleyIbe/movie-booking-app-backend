@@ -10,7 +10,7 @@ Rails.application.routes.draw do
     namespace :v1 do
       get '/movies' => 'movies#index'
       post '/movies/create' => 'movies#create'
-      post '/reservations' => 'reservations#index'
+      get '/reservations' => 'reservations#index'
       post '/reservations/create' => 'reservations#create'
       delete '/reservations/delete' => 'reservations#destroy'
       post '/register' => 'users#register'
