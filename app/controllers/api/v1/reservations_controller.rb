@@ -4,8 +4,7 @@ module Api
       # before_action :set_reservation, only: :destroy
 
       def index
-        @user = User.find_by(username: params[:username])
-        @reservations = @user.reservations
+        @reservations = Reservation.all
         if @reservations
           render json: { success: true, message: 'Loaded all reservations', data: { reservations: @reservations } },
                  status: :ok
@@ -16,8 +15,7 @@ module Api
 
       # POST /reservations
       def create
-        @user = User.find_by(username: params[:username])
-        @new_reservation = @user.reservations.create(movie_id: params[:movie_id], date: params[:date],
+        @new_reservation = Reservation.create(movie_id: params[:movie_id], date: params[:date],
                                                      location: params[:location])
         if @new_reservation.save
           render json: { success: true, message: 'Reservation created', data: { reservation: @new_reservation } },
