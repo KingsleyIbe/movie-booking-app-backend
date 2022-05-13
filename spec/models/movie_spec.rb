@@ -69,7 +69,7 @@ RSpec.describe Movie, type: :model do
     end
 
     context 'invalid' do
-         it 'check the title is not blank' do
+      it 'check the title is not blank' do
         subject.title = nil
         expect(subject).to_not be_valid
       end
