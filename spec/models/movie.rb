@@ -4,7 +4,7 @@ class Movie < ApplicationRecord
 
   validates :title, presence: true, length: { maximum: 50 }
   validates :director, presence: true, length: { maximum: 50 }
-  validates :description, presence: true, length: { maximum: 500 } 
+  validates :description, presence: true, length: { maximum: 500 }
   validates :playing_time, presence: true, length: { maximum: 50 }
   validates :photo, presence: true, length: { maximum: 250 }
   validates :release_date, presence: true, length: { maximum: 50 }

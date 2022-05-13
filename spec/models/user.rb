@@ -4,5 +4,4 @@ class User < ApplicationRecord
 
   validates :username, presence: true, length: { maximum: 50 }
   validates :role, presence: true
-
 end
