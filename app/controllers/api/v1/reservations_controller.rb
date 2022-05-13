@@ -21,9 +21,8 @@ module Api
 
       def create
         @user = User.find_by(username: params[:username])
-        @new_reservation = @user.reservations.create(movie_id: params[:movie_id], date: params[:date],
-        @new_reservation = Reservation.create(movie_id: params[:movie_id], date: params[:date],
-                                                     location: params[:location])
+        @new_reservation = @user.reservations.create(movie_id: params[:movie_id], date: params[:date]),
+        @new_reservation = Reservation.create(movie_id: params[:movie_id], date: params[:date], location: params[:location])
 
         if @new_reservation.save
           render json: { success: true, message: 'Reservation created', data: { reservation: @new_reservation } },
