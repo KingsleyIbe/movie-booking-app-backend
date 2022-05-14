@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 require 'swagger_helper'
 RSpec.describe 'api/v1/moviess', type: :request do
   path '/api/v1/moviess' do
@@ -34,22 +32,26 @@ RSpec.describe 'api/v1/moviess', type: :request do
           genre: { type: :string },
           ticket_price: { type: :string },
           country: { type: :string },
-          lead_cast: { type: :string },
+          lead_cast: { type: :string }
         },
         required: %w[name details photo city specialization cost]
       }
       response '401', 'movie created' do
-        let(:doctor) { { title: 'foo', director: 'bar', description: 'fo',
-          playing_time: 'bar', photo: 'fo', release_date: '06-05-2022', genre: 'Action', ticket_price: '200.0',
-          country: 'United States', lead_cast: 'Amkam' } }
+        let(:doctor) do
+          { title: 'foo', director: 'bar', description: 'fo',
+            playing_time: 'bar', photo: 'fo', release_date: '06-05-2022', genre: 'Action', ticket_price: '200.0',
+            country: 'United States', lead_cast: 'Amkam' }
+        end
         let(:Authorization) { 'Bearer abc' }
         run_test!
       end
 
       response '401', 'invalid request' do
-        let(:movie) { { title: 'foo', director: 'bar', description: 'fo',
-          playing_time: 'bar', photo: 'fo', release_date: '06-05-2022', genre: 'Action', ticket_price: '200.0',
-          country: 'United States', lead_cast: 'Amkam' } }
+        let(:movie) do
+          { title: 'foo', director: 'bar', description: 'fo',
+            playing_time: 'bar', photo: 'fo', release_date: '06-05-2022', genre: 'Action', ticket_price: '200.0',
+            country: 'United States', lead_cast: 'Amkam' }
+        end
         let(:Authorization) { 'Bearer abc' }
         run_test!
       end

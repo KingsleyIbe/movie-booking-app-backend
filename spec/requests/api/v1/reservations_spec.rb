@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 require 'swagger_helper'
 RSpec.describe 'api/v1/reservations', type: :request do
   path '/api/v1/reservations' do
