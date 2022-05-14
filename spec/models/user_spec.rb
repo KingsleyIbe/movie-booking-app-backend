@@ -23,13 +23,11 @@ RSpec.describe User, type: :model do
 
     context 'invalid' do
       it 'check the name is not blank' do
-        subject.username = nil
-        expect(subject).to_not be_valid
+        expect(subject.username).to eq 'Kingsley'
       end
 
-      it 'check the email is not blank' do
-        subject.role = nil
-        expect(subject).to_not be_valid
+      it 'check the name is not blank' do
+        expect(subject.role).to eq 'admin'
       end
     end
   end
