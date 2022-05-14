@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 require 'rails_helper'
 
 RSpec.describe Reservation, type: :model do
@@ -8,7 +6,7 @@ RSpec.describe Reservation, type: :model do
     movie = Movie.create!(
       title: 'Captain America and Winter Soldier',
       director: 'Fidge',
-      description: 'As Steve Rogers adapts to the complexities of a contemporary world, he joins Natasha Romanoff and Sam Wilson in his mission to uncover the secret behind a deadly, mysterious assassin.',
+      description: 'As Steve Rogers adapts to the complexities of a contemporary world,',
       playing_time: '2hr',
       photo: 'https://tvline.com/wp-content/uploads/2021/04/captain-america-and-winter-soldier-renewal.png?w=620',
       release_date: '06-20-2022',
@@ -39,10 +37,6 @@ RSpec.describe Reservation, type: :model do
 
       it 'user_id of movie to be valid' do
         expect(subject.movie_id).to eq movie.id
-      end
-
-      it 'user_id of movie to be valid' do
-        expect(subject.director).to eq 'Fidge'
       end
     end
   end

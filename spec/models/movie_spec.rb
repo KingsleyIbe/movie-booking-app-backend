@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 require 'rails_helper'
 
 RSpec.describe Movie, type: :model do
@@ -8,7 +6,7 @@ RSpec.describe Movie, type: :model do
       Movie.new(
         title: 'Captain America and Winter Soldier',
         director: 'Fidge',
-        description: 'As Steve Rogers adapts to the complexities of a contemporary world, he joins Natasha Romanoff and Sam Wilson in his mission to uncover the secret behind a deadly, mysterious assassin.',
+        description: 'As Steve Rogers adapts to the complexities of a contemporary world,',
         playing_time: '2hr',
         photo: 'https://tvline.com/wp-content/uploads/2021/04/captain-america-and-winter-soldier-renewal.png?w=620',
         release_date: '06-20-2022',
@@ -34,7 +32,7 @@ RSpec.describe Movie, type: :model do
       end
 
       it 'description of movie to be valid' do
-        expect(subject.description).to eq 'As Steve Rogers adapts to the complexities of a contemporary world, he joins Natasha Romanoff and Sam Wilson in his mission to uncover the secret behind a deadly, mysterious assassin.'
+        expect(subject.description).to eq 'As Steve Rogers adapts to the complexities of a contemporary world,'
       end
 
       it 'playing_time of movie to be valid' do

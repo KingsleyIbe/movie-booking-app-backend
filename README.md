@@ -7,8 +7,6 @@ This is a movie app which allows registered users to book and reserve movies of 
 
 # Demo Account
 
-
-
 # Built with
  - RoR
  - Swagger
@@ -41,6 +39,10 @@ To get a local copy up and running follow these simple example steps.
 
 - Make sure to run our [Rails backend application](https://github.com/KingsleyIbe/movie-booking-app-backend) first before running the React app so that it takes up the `port 3000`. This is very important as our rails API end point must run on `port 3000` for the API to work.
 - Once the back end is runing on `port 3000` then start the react app and you will be prompted to run the server on another port like `port 3001`. You will receive a message in your terminal like this `Would you like to run the app on another port instead? » (Y/n)`. Please enter `y` so that the react app will start on `port 3001`.
+
+### To Run test
+
+Run `rspec spec`
 
 # Authors
 
